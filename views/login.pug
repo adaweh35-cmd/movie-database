@@ -1,0 +1,24 @@
+extends base
+block content
+  div
+    a(href='#')
+      img#logo-1(src='/img/Carleton-IMDB-logo.png')
+  .flex-parent
+    a(href='#')
+      img#logo-2(src='img/Carleton-IMDB-logo.png')
+    h1.login-txt Sign in
+    h3.login-txt using your Carleton Account
+    form.login-form
+      
+      input#email.search-txt(type='text' name='' placeholder='Enter Username or Email' required)
+      input#password.search-txt(type='text' name='' placeholder='Enter Password' required)
+      #search-btn-Container
+        button.search-button(type='submit') Login In
+      .signIn-Options
+        div(action='/action_page.php')
+          input#staySignedIn(type='checkbox')
+          label(for='vehicle1')  Stay signed in
+        h1
+          a#forgot-Username(href='#') Forgot Username
+      button.search-btn-two
+        a#createAcc-btn(href='/signUp') Create an Account

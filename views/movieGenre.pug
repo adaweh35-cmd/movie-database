@@ -1,0 +1,19 @@
+extends base
+block content
+  main.main-content
+    .recom-mov-div
+      h2 Movie Results
+    .recom-mov-Container
+      each movie in movies
+        .card
+          .mov-img-con
+            img(class="movie-img" src=`${movie.Poster}` alt="Movie Image")
+            h3.mov-title= `${movie.Title}  (${movie.Year})`
+            button.details-btn
+              
+              a(href=`/movie/${movie.slug}`) Details
+          .rating-mov
+            img(class="icon-rating" src='/img/icons8-star-filled-48.png' alt='')
+            span.movie-rating=`${movie.imdbRating}`
+
+

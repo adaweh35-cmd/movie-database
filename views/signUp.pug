@@ -1,0 +1,37 @@
+extends base
+block content  
+  div
+    a(href='#')
+      img#logo-1(src='img/Carleton-IMDB-logo.png')
+  .flex-parent
+    h2 Sign Up
+    h2 Create a Carleton MB Account
+    div
+      input.search-txt.input-Names(type='text' name='' placeholder='First Name' required)
+      input.search-txt.input-Names(type='text' name='' placeholder='Last Name' required)
+    input.search-txt(type='text' name='' placeholder='Email Adress' required)
+    input.search-txt(type='text' name='' placeholder='Password' required)
+    input.search-txt(type='tel' name='' placeholder='Mobile Number: 123-456-901' required)
+    .birthDate
+      select#birthMonth(name='birthMonth' required)
+        option(value='' selected='' disabled='') Birth &nbsp;Month
+        option(value='') Jan
+        option(value='') Feb
+        option(value='') Mar
+        option(value='') Apr
+        option(value='') May
+        option(value='') Jun
+        option(value='') Jul
+        option(value='') Aug
+        option(value='') Sep
+        option(value='') Oct
+        option(value='') Nov
+        option(value='') Dec
+      input.birthDate-info(type='text' name='' placeholder='Day' required)
+      input.birthDate-info(type='text' name='' placeholder='Year' required)
+    input.search-txt(type='tel' name='' placeholder='Gender (optional)')
+    #search-btn-Container
+      button.search-button(type='submit') Sign Up
+    h1#redirec-SignIn
+      | Already have a account? 
+      a(href='/login') Sign in

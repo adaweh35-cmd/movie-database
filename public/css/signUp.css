@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 250;
+}
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+#logo-1 {
+  height: 10%;
+  width: 8%;
+}
+#logo-2 {
+  width: 30%;
+}
+
+.flex-parent {
+  position: relative;
+  left: 650px;
+  bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  min-height: 580px;
+  text-align: center;
+  box-shadow: 1px 1px 10px #888888;
+  grid-gap: 1em;
+}
+.search-txt {
+  border: 0;
+  text-decoration: none;
+  text-align: center;
+  background-color: transparent;
+  border-bottom: 1px solid rgb(219, 215, 215);
+  border-bottom-width: thin;
+  height: 40px;
+
+  padding-right: 60px;
+  font-size: 18px;
+  width: 80%;
+}
+.input-Names {
+  padding-right: 60px;
+  width: 30%;
+}
+
+#birthMonth {
+  border: 0;
+  text-decoration: none;
+  text-align: center;
+  background-color: transparent;
+  border-bottom: 1px solid rgb(219, 215, 215);
+  border-bottom-width: thin;
+  height: 40px;
+  padding-right: 10px;
+  font-size: 18px;
+  width: 40%;
+}
+
+.birthDate-info {
+  border: 0;
+  text-decoration: none;
+  text-align: center;
+  background-color: transparent;
+  border-bottom: 1px solid rgb(219, 215, 215);
+  border-bottom-width: thin;
+  height: 40px;
+  padding-right: 10px;
+  font-size: 18px;
+  width: 20%;
+}
+.search-button {
+  padding: 12px 30px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  background-color: #269ce9;
+  border-color: #269ce9;
+  border-radius: 16px;
+  width: 80%;
+}
+#search-btn-Container {
+  padding-top: 3%;
+}
+
+.search-button:hover {
+  background-color: #031ba5da;
+}
+#redirec-SignIn {
+  font-size: 17px;
+}

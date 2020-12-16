@@ -1,0 +1,67 @@
+extends base
+block content
+  main.main-content
+    .movie-details-con
+      img.movie-img-detail(src=`${movie.Poster}` alt='Movie Poster')
+      .mov-details
+        
+        span= `${movie.Title} (${movie.Year} ${movie.Rated})`
+        .listGenre
+          - let genreArray = movie.Genre.split(',')
+          span='Genre: '
+          each item in genreArray
+            a.genre-link(href=`/movieGenre/${item}`)
+              span= `${item}`
+        .listActors
+          - let actorArray = movie.Actors.split(',')
+          span='Actors: '
+          each item in actorArray
+            
+            a.genre-link(href=`/person/${item}`)
+              span= `${item}`
+        a.genre-link(href=`/person/${movie.Director}`)
+              span= `Director: ${movie.Director}`
+        span= `Carleton IMDB Score: ${movie.imdbRating}`
+        span= `Runtime: ${movie.Runtime}`
+        span= `Plot: ${movie.Plot}`
+        span=`Similar Movies`
+        .similarMovies
+          each i in similarMovies
+            a(href=`/movie/${i.slug}`)
+              img#similarMovies-img(src=`${i.Poster}` alt='Movie Poster')
+            
+        - let reviewArray = movie.reviews
+        .review-Container
+          h2#review-Header='Reviews'
+          -let counter =0
+          hr
+          each item in reviewArray
+            .reviews
+              p=`Score: ${item.Score}   `
+              if item.Summary != null 
+                p=`Summary: ${item.Summary}  `
+              if item.Review != null
+                p=`Review: ${item.Review}   `
+              hr  
+        a.addReview(href='#' onclick="document.getElementById('form-Container-review').style.display='block'") Add Review
+  
+  #form-Container-review
+    .search-form-head Enter Params to add a Review
+    form.search-form-review
+      var#movieId= `${movie.id}`
+      label Score
+      input#search-Score(type='number' min=0 max=10) 
+      br
+      label Summary
+      input#search-Summary(type='text')
+      br
+      label Review
+      input#search-Review(type='text')
+      br
+      button#search-btn(type='submit') SUBMIT
+      a#exit-modal(href='#' onclick="document.getElementById('form-Container-review').style.display='none'") Exit Window
+         
+  
+        
+
+

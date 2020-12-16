@@ -1,0 +1,15 @@
+extends base
+block content
+  main.main-content
+    .recom-mov-div
+  
+      h2.followed-Title= `Followed People`
+    .recom-mov-Container
+      each person in persons
+        .card-Persons
+          h2#follow-Name=`${person}`
+          button.details-btn
+              a(href=`/person/${person}`) Details
+          
+            
+          
