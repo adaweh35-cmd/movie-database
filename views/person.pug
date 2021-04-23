@@ -3,23 +3,22 @@ block content
   main.main-content
     .recom-mov-div
   
-      h2= `${persons[0].Name}`
+      h2= `${person.Name}`
     .recom-mov-Container
-      each person in persons
-      
-        .card
-          .mov-img-con
-            img(class="movie-img" src=`${person.movie.Poster}` alt="Movie Image")
-            
-            h3.mov-title= `Role:  ${person.Role}`
-            var#userId= `${user.id}`
-            button.details-btn
-              a(href=`/movie/${person.movie.slug}`) Details
-            if user.followedPeople.includes(person.Name)
-              button.followedPerson-btn
-                a(href='#' name=`${person.Name}`)=`Unfollow ${person.Name}`
-            else
-              button.followedPerson-btn
-                a(href='#' name=`${person.Name}`)=`Follow ${person.Name}`
+   
+      .card
+        .mov-img-con
+          img(class="movie-img" src=`${person.movie.Poster}` alt="Movie Image")
+          
+          h3.mov-title= `Role:  ${person.Role}`
+          var#userId= `${user.id}`
+          button.details-btn
+            a(href=`/movie/${person.movie.slug}`) Details
+          if user.followedPeople.includes(person.Name)
+            button.followedPerson-btn
+              a(href='#' name=`${person.Name}`)=`Unfollow ${person.Name}`
+          else
+            button.followedPerson-btn
+              a(href='#' name=`${person.Name}`)=`Follow ${person.Name}`
             
           

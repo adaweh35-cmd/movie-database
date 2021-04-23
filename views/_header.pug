@@ -5,42 +5,42 @@ nav.nav-bar
     img.logo-1(src='/img/Carleton-IMDB-logo.png')
   .dropdown
     button.dropbtn Menu
+        
     .dropdown-content
       a.btn-People(href='#') View Followed People
       a(href='#' onclick="document.getElementById('form-Container').style.display='block'") Search for Movie
       a(href='#' onclick="document.getElementById('form-Container-person').style.display='block'") Search for Person
-  #form-Container
-    .search-form-head To Search a Movie, Enter the Search Parameters
-    form.search-form
-      label Movie Name
-      input#search-term(type='text') 
-      br
-      label Movie Year
-      input#search-Year(type='number' min='1900' max='2020')
-      br
-      label Movie Genre
-      input#search-Genre(type ='text')
-      br
-      button#search-btn(type='submit') SEARCH
-    a#exit-modal(href='#' onclick="document.getElementById('form-Container').style.display='none'") Exit Window
+    #form-Container
+      .search-form-head To Search a Movie, Enter the Search Parameters
+      form.search-form
+        label Movie Name
+        input#search-term(type='text') 
+        br
+        label Movie Year
+        input#search-Year(type='number' min='1900' max='2020')
+        br
+        label Movie Genre
+        input#search-Genre(type ='text')
+        br
+        button#search-btn(type='submit') SEARCH
+      a#exit-modal(href='#' onclick="document.getElementById('form-Container').style.display='none'") Exit Window
 
-  #form-Container-person
-    .search-form-head To Search a Person, Enter the Search Parameters
-    form.search-form-person
-      label Person Name
-      input#search-pName(type='text') 
-      br
-      label Movie Name
-      input#search-mName(type='text')
-      br
-      
-      button#search-btn(type='submit') SEARCH
-    a#exit-modal(href='#' onclick="document.getElementById('form-Container-person').style.display='none'") Exit Window
-  
+    #form-Container-person
+      .search-form-head To Search a Person, Enter the Search Parameters
+      form.search-form-person
+        label Person Name
+        input#search-pName(type='text') 
+        br
+        label Movie Name
+        input#search-mName(type='text')
+        br
+        
+        button#search-btn(type='submit') SEARCH
+      a#exit-modal(href='#' onclick="document.getElementById('form-Container-person').style.display='none'") Exit Window
+    
   if user
-    button.logout#sign-button Logout
-    button#sign-button
-      span= `${user.Name}`
+    button.logout#sign-button=`Logout , ${user.Name}`
+   
       
   else
     button.login#sign-button

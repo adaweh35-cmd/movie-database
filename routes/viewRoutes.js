@@ -7,7 +7,7 @@ const router = express.Router();
 router.get('/movie/:slug',authController.isLoggedIn, movieController.similarMovies, viewController.getMovie);
 router.get('/movieGenre/:genre', viewController.genreMovies);
 router.get('/', authController.isLoggedIn, authController.protect, movieController.getRecommendedMovies, viewController.getRecommondedMovies);
-router.get('/login',  authController.isLoggedIn, viewController.getLoginForm);
+router.get('/login', viewController.getLoginForm);
 router.get('/signup', viewController.getSignUpForm);
 router.get('/person/:name', authController.isLoggedIn, authController.protect, viewController.getPerson);
 router.get('/movies', authController.isLoggedIn, viewController.getMovies);

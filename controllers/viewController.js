@@ -43,9 +43,10 @@ exports.getMovies = async(req, res) => {
  
 } 
 exports.getPerson = async(req,res) => {
-  const persons = await Person.find({Name: req.params.name});
+  const person = await Person.findOne({Name: req.params.name});
+  console.log(person);
   res.status(200).render('person', {
-    persons,
+    person,
     user: req.user
   });
 }
